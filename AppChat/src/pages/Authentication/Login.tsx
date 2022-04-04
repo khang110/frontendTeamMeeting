@@ -133,8 +133,8 @@ const Login = (props: LoginProps) => {
         <Col sm={8} lg={6} xl={5} className="col-xxl-4">
           <div className="py-md-5 py-4">
             <AuthHeader
-              title="Welcome Back !"
-              subtitle="Sign in to continue to Doot."
+              title="Đăng nhập"
+              // subtitle="Đăng nhập"
             />
 
             {error && <Alert color="danger">{error}</Alert>}
@@ -146,21 +146,21 @@ const Login = (props: LoginProps) => {
               {loginLoading && <Loader />}
               <div className="mb-3">
                 <FormInput
-                  label="Username"
+                  label="Tên đăng nhập"
                   type="text"
                   name="email"
                   register={register}
                   errors={errors}
                   control={control}
                   labelClassName="form-label"
-                  placeholder="Enter username"
+                  placeholder="Nhập tên đăng nhập"
                   className="form-control"
                 />
               </div>
 
               <div className="mb-3">
                 <FormInput
-                  label="Password"
+                  label="Mật khẩu"
                   type="password"
                   name="password"
                   register={register}
@@ -168,7 +168,7 @@ const Login = (props: LoginProps) => {
                   control={control}
                   labelClassName="form-label"
                   className="form-control pe-5"
-                  placeholder="Enter Password"
+                  placeholder="Nhập mật khẩu"
                 />
               </div>
 
@@ -182,19 +182,19 @@ const Login = (props: LoginProps) => {
                   className="form-check-label font-size-14"
                   htmlFor="remember-check"
                 >
-                  Remember me
+                  Duy trì đăng nhập
                 </Label>
               </div>
 
               <div className="text-center mt-4">
                 <Button color="primary" className="w-100" type="submit">
-                  Log In
+                  Đăng nhập
                 </Button>
               </div>
 
               <div className="mt-4 text-center">
                 <div className="signin-other-title">
-                  <h5 className="font-size-14 mb-4 title">Sign in with</h5>
+                  <h5 className="font-size-14 mb-4 title">Đăng nhập với</h5>
                 </div>
                 <Row className="">
                   <div className="col-4">
@@ -263,13 +263,13 @@ const Login = (props: LoginProps) => {
 
             <div className="mt-5 text-center text-muted">
               <p>
-                Don't have an account ?{" "}
+                Chưa có tài khoản ?{" "}
                 <Link
                   to="/auth-register"
                   className="fw-medium text-decoration-underline"
                 >
                   {" "}
-                  Register
+                  Đăng ký
                 </Link>
               </p>
             </div>

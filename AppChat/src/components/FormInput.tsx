@@ -117,7 +117,7 @@ const FormInput: React.FunctionComponent<FormInputProps> = ({
                   {!withoutLabel && (
                     <div className="float-end">
                       <a href="auth-recoverpw" className="text-muted">
-                        Forgot password?
+                        Quên mật khẩu?
                       </a>
                     </div>
                   )}

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // images
 import authImage from "../assets/images/auth-img.png";
-
+import logoMain from "../assets/images/logomain.png";
 interface NonAuthLayoutWrapperProps {
   children: any;
 }
@@ -19,19 +19,21 @@ const NonAuthLayoutWrapper = (props: NonAuthLayoutWrapperProps) => {
             <Col xl={3} lg={4}>
               <div className="p-4 pb-0 p-lg-5 pb-lg-0 auth-logo-section">
                 <div className="text-white-50">
-                  <h3>
+                  {/* <h3>
                     <Link to="/" className="text-white">
                       <i className="bx bxs-message-alt-detail align-middle text-white h3 mb-1 me-2"></i>{" "}
                       Doot
                     </Link>
                   </h3>
                   <p className="font-size-16">
-                    Responsive Bootstrap 5 Chat App
-                  </p>
+                    Điện lực Bình Thuận
+                  </p> */}
+
+                  <img src={logoMain} alt="auth" className="auth-img" />
                 </div>
-                <div className="mt-auto">
+                {/* <div className="mt-auto">
                   <img src={authImage} alt="auth" className="auth-img" />
-                </div>
+                </div> */}
               </div>
             </Col>
 
@@ -44,9 +46,9 @@ const NonAuthLayoutWrapper = (props: NonAuthLayoutWrapperProps) => {
                     <Col xl={12}>
                       <div className="text-center text-muted p-4">
                         <p className="mb-0">
-                          &copy; {new Date().getFullYear()} Doot. Crafted with{" "}
+                          &copy; {new Date().getFullYear()} OTT. Crafted with{" "}
                           <i className="mdi mdi-heart text-danger"></i> by
-                          Themesbrand
+                          NAK
                         </p>
                       </div>
                     </Col>
