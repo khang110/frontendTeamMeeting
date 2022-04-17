@@ -15,7 +15,7 @@ import {
 import {
   postFakeLogin,
   postJwtLogin,
-  postSocialLogin,
+  postSocialLogin,loginOTT,
 } from "../../../api/index";
 
 const fireBaseBackend = getFirebaseBackend();
@@ -42,7 +42,7 @@ function* loginUser({ payload: { user } }: any) {
         authLoginApiResponseSuccess(AuthLoginActionTypes.LOGIN_USER, response)
       );
     } else if (process.env.REACT_APP_DEFAULTAUTH === "fake") {
-      const response: Promise<any> = yield call(postFakeLogin, {
+      const response: Promise<any> = yield call(loginOTT, {
         email: user.email,
         password: user.password,
       });

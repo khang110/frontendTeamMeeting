@@ -52,7 +52,9 @@ class APIClient {
    * post given data to url
    */
   create = (url: string, data?: {}) => {
-    return axios.post(url, data);
+    return axios.post(url, JSON.stringify(data), {headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }});
   };
 
   /**

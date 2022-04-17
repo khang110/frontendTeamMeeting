@@ -8,7 +8,8 @@ import {
   Button,
   UncontrolledTooltip,
 } from "reactstrap";
-
+import axios from "axios";
+import * as url from "../../api/urls";
 //Social Media Imports
 import { GoogleLogin } from "react-google-login";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
@@ -77,8 +78,8 @@ const Login = (props: LoginProps) => {
   );
 
   const defaultValues: any = {
-    email: "admin@themesbrand.com",
-    password: "123456",
+    email: "anhkhang110@gmail.com",
+    password: "12345678",
   };
 
   const methods = useForm({ defaultValues, resolver });
@@ -90,7 +91,17 @@ const Login = (props: LoginProps) => {
   } = methods;
 
   const onSubmitForm = (values: object) => {
-    dispatch(loginUser(values));
+    console.log(values)
+   axios({
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: JSON.stringify(values),
+      url: "https://enigmatic-waters-46253.herokuapp.com/api/auth/login"}).then((res) => {
+        console.log(res.data);
+      })
+    // dispatch(loginUser(values));
   };
 
   const { userProfile, loading } = useProfile();
@@ -130,7 +141,7 @@ const Login = (props: LoginProps) => {
   return (
     <NonAuthLayoutWrapper>
       <Row className=" justify-content-center my-auto">
-        <Col sm={8} lg={6} xl={5} className="col-xxl-4">
+        <Col sm={6} lg={6} xl={5} className="col-sm-6">
           <div className="py-md-5 py-4">
             <AuthHeader
               title="Đăng nhập"

@@ -15,11 +15,11 @@ import Routes from "./routes";
 
 //api config
 // import config from "./config";
-import fakeBackend from "./helpers/fakeBackend";
+// import fakeBackend from "./helpers/fakeBackend";
 
 
 // TODO
-fakeBackend();
+// fakeBackend();
 
 // const firebaseConfig = {
 //   apiKey: config.FIRE_BASE.API_KEY,

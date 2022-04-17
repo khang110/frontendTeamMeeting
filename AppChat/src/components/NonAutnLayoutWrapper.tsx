@@ -1,10 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
-import { Link } from "react-router-dom";
-
-// images
-import authImage from "../assets/images/auth-img.png";
 import logoMain from "../assets/images/logomain.png";
 interface NonAuthLayoutWrapperProps {
   children: any;
@@ -15,7 +11,7 @@ const NonAuthLayoutWrapper = (props: NonAuthLayoutWrapperProps) => {
     <>
       <div className="auth-bg">
         <Container fluid className="p-0">
-          <Row className=" g-0">
+          <Row className=" g-0" style={{ justifyContent: 'space-between', opacity: 0.97 }}>
             <Col xl={3} lg={4}>
               <div className="p-4 pb-0 p-lg-5 pb-lg-0 auth-logo-section">
                 <div className="text-white-50">
@@ -31,28 +27,13 @@ const NonAuthLayoutWrapper = (props: NonAuthLayoutWrapperProps) => {
 
                   <img src={logoMain} alt="auth" className="auth-img" />
                 </div>
-                {/* <div className="mt-auto">
-                  <img src={authImage} alt="auth" className="auth-img" />
-                </div> */}
               </div>
             </Col>
 
-            <Col xl={9} lg={8}>
+            <Col xl={6} lg={8}>
               <div className="authentication-page-content">
                 <div className="d-flex flex-column h-100 px-4 pt-4">
                   {props.children}
-
-                  <Row className="">
-                    <Col xl={12}>
-                      <div className="text-center text-muted p-4">
-                        <p className="mb-0">
-                          &copy; {new Date().getFullYear()} OTT. Crafted with{" "}
-                          <i className="mdi mdi-heart text-danger"></i> by
-                          NAK
-                        </p>
-                      </div>
-                    </Col>
-                  </Row>
                 </div>
               </div>
             </Col>

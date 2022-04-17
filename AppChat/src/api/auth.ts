@@ -31,6 +31,10 @@ const changePassword = (data: object) => {
 // postSocialLogin
 const postSocialLogin = (data: any) => api.create(url.SOCIAL_LOGIN, data);
 
+// auth OTT
+const loginOTT = (data: any) => api.create(url.POST_LOGIN_OTT, data);
+const registerOTT = (data: any) => api.create(url.POST_REGISTER_OTT, data);
+
 export {
   postFakeForgetPwd,
   postJwtForgetPwd,
@@ -40,4 +44,6 @@ export {
   postJwtRegister,
   changePassword,
   postSocialLogin,
+  loginOTT,
+  registerOTT,
 };

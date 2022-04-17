@@ -13,7 +13,7 @@ const Welcome = () => {
                   <i className="bx bxs-message-alt-detail display-4 text-primary m-0"></i>
                 </div>
               </div>
-              <h4>Chào mừng đến với website chat nội bộ điện lực Bình Thuận</h4>
+              {/* <h4>Chào mừng đến với website chat nội bộ điện lực Bình Thuận</h4> */}
               
             </div>
           </Col>
