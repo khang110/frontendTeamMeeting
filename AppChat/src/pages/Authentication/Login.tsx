@@ -89,19 +89,11 @@ const Login = (props: LoginProps) => {
     control,
     formState: { errors },
   } = methods;
-
+  type Response = {
+    data: {};
+  };
   const onSubmitForm = (values: object) => {
-    console.log(values)
-   axios({
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      data: JSON.stringify(values),
-      url: "https://enigmatic-waters-46253.herokuapp.com/api/auth/login"}).then((res) => {
-        console.log(res.data);
-      })
-    // dispatch(loginUser(values));
+    dispatch(loginUser(values));
   };
 
   const { userProfile, loading } = useProfile();
