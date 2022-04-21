@@ -34,7 +34,7 @@ const AttachedFiles = ({
               </span>
             </Button>
             <h5 className="font-size-11 text-uppercase text-muted mt-2">
-              Message
+              Tin nhắn
             </h5>
           </div>
         </div>
@@ -56,7 +56,7 @@ const AttachedFiles = ({
               </span>
             </Button>
             <h5 className="font-size-11 text-uppercase text-muted mt-2">
-              Favourite
+              Yêu thích
             </h5>
           </div>
         </div>
@@ -119,7 +119,7 @@ const AttachedFiles = ({
                     </>
                   ) : (
                     <>
-                      Archive <i className="bx bx-archive text-muted"></i>
+                      Nén <i className="bx bx-archive text-muted"></i>
                     </>
                   )}
                 </DropdownItem>
@@ -127,18 +127,18 @@ const AttachedFiles = ({
                   className=" d-flex justify-content-between align-items-center"
                   to="#"
                 >
-                  Muted <i className="bx bx-microphone-off text-muted"></i>
+                  Tát âm <i className="bx bx-microphone-off text-muted"></i>
                 </DropdownItem>
                 <DropdownItem
                   className=" d-flex justify-content-between align-items-center"
                   to="#"
                 >
-                  Delete <i className="bx bx-trash text-muted"></i>
+                  Xóa <i className="bx bx-trash text-muted"></i>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
             <h5 className="font-size-11 text-uppercase text-muted mt-2">
-              More
+              Thêm
             </h5>
           </div>
         </div>

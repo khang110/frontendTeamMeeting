@@ -20,13 +20,12 @@ interface ContactItemProps {
 }
 const ContactItem = ({ contact, onSelectChat }: ContactItemProps) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+  // console.log(contact);
   const toggle = () => setDropdownOpen(!dropdownOpen);
 
-  const fullName = `${contact.firstName} ${contact.lastName}`;
-  const shortName = `${contact.firstName.charAt(0)}${contact.lastName.charAt(
-    0
-  )}`;
+  const fullName = `${contact.name}`;
+  const shortName = `${contact.name}`;
+  // const shortName = `${contact.firstName.charAt(0)}${contact.lastName.charAt(0)}`;
   const colors = [
     "bg-primary",
     "bg-danger",
@@ -108,6 +107,8 @@ const CharacterItem = ({
   index,
   onSelectChat,
 }: CharacterItemProps) => {
+  // console.log("ở đây đúng khum")
+  console.log(letterContacts)
   return (
     <div className={classnames({ "mt-3": index !== 0 })}>
       <div className="contact-list-title">{letterContacts.letter}</div>

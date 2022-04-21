@@ -12,26 +12,32 @@ import img1 from "../assets/images/small/img-1.jpg";
 import img2 from "../assets/images/small/img-2.jpg";
 import img3 from "../assets/images/small/img-3.jpg";
 import img4 from "../assets/images/small/img-4.jpg";
-
+import { useRedux } from "../hooks/index";
 // interfaces
 import { ChannelTypes } from "./chat";
 import { MediaTypes, AttachedfileTypes } from "./myProfile";
 import { STATUS_TYPES } from "../constants";
 export interface ContactTypes {
   id: string | number;
-  firstName: string;
-  lastName: string;
+  firstName?: string;
+  lastName?: string;
   profileImage?: any;
   about?: string;
   email: string;
-  location: string;
+  location?: string;
   channels?: Array<ChannelTypes>;
   media?: MediaTypes;
   attachedFiles?: AttachedfileTypes;
   status?: STATUS_TYPES;
   isFavourite?: boolean;
   isArchived?: boolean;
+  name: string;
+  
 }
+
+
+let contacts: ContactTypes[] = []
+/*
 let contacts: ContactTypes[] = [
   {
     id: "614ecab426f59ce2863e106e",
@@ -1494,7 +1500,7 @@ let contacts: ContactTypes[] = [
     },
   },
 ];
-
+*/
 const onChangeContacts = (newData: Array<ContactTypes>) => {
   contacts = newData;
 };

@@ -9,7 +9,7 @@ import {
 
 // api
 import {
-  getContacts as getContactsApi,
+  getContactsOTT as getContactsApi,
   inviteContact as inviteContactApi,
 } from "../../api/index";
 

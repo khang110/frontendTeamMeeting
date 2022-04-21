@@ -12,55 +12,56 @@ export interface UserTypes {
     unRead?: number;
     status?: STATUS_TYPES;
   };
+  name: string
 }
 let favourites: Array<UserTypes> = [
-  {
-    ...contacts[4],
-    meta: {
-      unRead: 3,
-      status: STATUS_TYPES.ACTIVE,
-    },
-  },
-  {
-    ...contacts[5],
-    meta: {
-      status: STATUS_TYPES.ACTIVE,
-    },
-  },
-  {
-    ...contacts[6],
-  },
-  {
-    ...contacts[7],
-    meta: {
-      status: STATUS_TYPES.ACTIVE,
-    },
-  },
+  // {
+  //   ...contacts[4],
+  //   meta: {
+  //     unRead: 3,
+  //     status: STATUS_TYPES.ACTIVE,
+  //   },
+  // },
+  // {
+  //   ...contacts[5],
+  //   meta: {
+  //     status: STATUS_TYPES.ACTIVE,
+  //   },
+  // },
+  // {
+  //   ...contacts[6],
+  // },
+  // {
+  //   ...contacts[7],
+  //   meta: {
+  //     status: STATUS_TYPES.ACTIVE,
+  //   },
+  // },
 ];
 
-let directMessages: Array<UserTypes> = [
-  {
-    ...contacts[16],
-  },
-  {
-    ...contacts[17],
-  },
-  {
-    ...contacts[8],
-    meta: {
-      unRead: 5,
-    },
-  },
-  {
-    ...contacts[18],
-  },
-  {
-    ...contacts[3],
-  },
-  {
-    ...contacts[11],
-  },
-];
+let directMessages: Array<UserTypes> = []
+//   {
+//     ...contacts[16],
+//   },
+//   {
+//     ...contacts[17],
+//   },
+//   {
+//     ...contacts[8],
+//     meta: {
+//       unRead: 5,
+//     },
+//   },
+//   {
+//     ...contacts[18],
+//   },
+//   {
+//     ...contacts[3],
+//   },
+//   {
+//     ...contacts[11],
+//   },
+// ];
 
 const onChangeDirectMessages = (newData: Array<UserTypes>) => {
   directMessages = newData;

@@ -11,7 +11,7 @@ import { changelayoutMode } from "./redux/actions";
 import Routes from "./routes";
 
 // Import Firebase Configuration file
-// import { initFirebaseBackend } from "./helpers/firebase_helper";
+import { initFirebaseBackend } from "./helpers/firebase_helper";
 
 //api config
 // import config from "./config";
@@ -31,9 +31,17 @@ import Routes from "./routes";
 //   appId: config.FIRE_BASE.APPID,
 //   measurementId: config.FIRE_BASE.MEASUREMENTID,
 // };
-
+const firebaseConfig = {
+  apiKey: "AIzaSyCmrehLHv3XXtDcJKzw6Q5sPVpLethy6qk",
+  authDomain: "teammeating-7706e.firebaseapp.com",
+  projectId: "teammeating-7706e",
+  storageBucket: "teammeating-7706e.appspot.com",
+  messagingSenderId: "480419074137",
+  appId: "1:480419074137:web:612833a59bfcd3e1a8e148",
+  measurementId: "G-FHB4986DRT"
+};
 // // init firebase backend
-// initFirebaseBackend(firebaseConfig);
+initFirebaseBackend(firebaseConfig);
 
 const App = () => {
   const dispatch = useDispatch();

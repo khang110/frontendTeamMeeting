@@ -10,4 +10,9 @@ const getContacts = (filters?: object) => {
 const inviteContact = (data: object) => {
   return api.create(url.INVITE_CONTACT, data);
 };
-export { getContacts, inviteContact };
+
+const getContactsOTT = (filters?: object) => {
+  return api.get(url.GET_CONTACTS_OTT, filters);
+};
+
+export { getContacts, getContactsOTT, inviteContact };

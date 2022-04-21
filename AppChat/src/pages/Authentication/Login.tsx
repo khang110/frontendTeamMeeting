@@ -89,9 +89,7 @@ const Login = (props: LoginProps) => {
     control,
     formState: { errors },
   } = methods;
-  type Response = {
-    data: {};
-  };
+  
   const onSubmitForm = (values: object) => {
     dispatch(loginUser(values));
   };

@@ -54,3 +54,6 @@ export const GET_CHANNEL_DETAILS = "/get-channel-details";
 // auth custom lavrel
 export const POST_LOGIN_OTT = "/api/auth/login";
 export const POST_REGISTER_OTT = "/api/auth/register";
+
+// get list contact 
+export const GET_CONTACTS_OTT = "/api/list-users";
